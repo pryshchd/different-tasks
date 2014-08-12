@@ -1,7 +1,5 @@
-<pre>
 <?php
-$users = array ('login'=> array ('password'=>'', 'allowed'=> array('zip'=> '1000', 'jpg' => '2000'),'home'=>'login', 'limit'=> '10000'),
-				'login2'=> array ('password'=>'', 'allowed'=> array('txt'=> '1000', 'jpg' => '2000'),'home'=>'login', 'limit'=> '10000'));
-print_r($users);
+$users = array ('login'=> array ('password'=>'l1', 'allowed'=> array('zip'=> '1', 'jpg' => '2'),'home'=>'login', 'limit'=> '1'),
+				'login2'=> array ('password'=>'l2', 'allowed'=> array('txt'=> '1', 'jpg' => '2'),'home'=>'login2', 'limit'=> '10'));
+//print_r($users);
 ?>
-</pre>
