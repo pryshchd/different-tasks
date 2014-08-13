@@ -63,11 +63,9 @@ if (isset($_GET))
 //получение ссылки для скачивания файла
 if (isset($_GET))
 {
-
 	$downloadLink = $_GET['downloadLink'];
 	if (file_exists($downloadLink)) 
-	{
-		
+	{		
 		header('Content-Description: File Transfer');
 	    header('Content-Type: application/octet-stream');
 	    header('Content-Disposition: attachment; filename=' . $downloadLink );
@@ -75,7 +73,6 @@ if (isset($_GET))
 	    header('Cache-Control: must-revalidate');
 	    header('Pragma: public');
 	    header('Content-Length: ' . filesize($downloadLink));
-	    // читаем файл и отправляем его пользователю
 	    readfile($downloadLink);
 	    exit;		
 	}
