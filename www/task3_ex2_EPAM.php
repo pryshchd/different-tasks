@@ -60,7 +60,7 @@ if (isset($_GET))
 		chooseElements();
 	}
 }
-//получение ссылки для скачивания файла
+//получение ссылки для скачивания файла и скачивание файла
 if (isset($_GET))
 {
 	$downloadLink = $_GET['downloadLink'];
@@ -68,11 +68,14 @@ if (isset($_GET))
 	{		
 		header('Content-Description: File Transfer');
 	    header('Content-Type: application/octet-stream');
-	    header('Content-Disposition: attachment; filename=' . $downloadLink );
+	    //header('Content-Disposition: attachment; filename="' . basename($downloadLink) . '";');
+	   	header('Content-Disposition: attachment; filename=' . $downloadLink );
 	    header('Expires: 0');
 	    header('Cache-Control: must-revalidate');
 	    header('Pragma: public');
 	    header('Content-Length: ' . filesize($downloadLink));
+	    ob_clean();
+        flush();
 	    readfile($downloadLink);
 	    exit;		
 	}
@@ -91,4 +94,4 @@ function chooseElements()
 	showEntryForm();
 	}
 }
-
+?>
