@@ -1,0 +1,33 @@
+<users>
+	<user>
+		<login>login</login>
+		<password>l1</password>
+		<allowed>
+			<extension>
+				<name>jpg</name>
+				<size>2</size>
+			</extension>
+			<extension>
+				<name>gif</name>
+				<size>1</size>
+			</extension>
+		</allowed>
+		<home>login</home>
+		<totalLimit>3</totalLimit>
+	</user>	
+	<user>
+		<login>login2</login>
+		<password>l2</password>
+		<allowed><extension>
+				<name>jpg</name>
+				<size>1</size>
+			</extension>
+			<extension>
+				<name>gif</name>
+				<size>1</size>
+			</extension>
+		</allowed>
+		<home>login2</home>
+		<totalLimit>3</totalLimit>
+	</user>	
+</users>
