@@ -4,7 +4,6 @@ $dollar='$';
 $quote="'";
 $dblquote='"';
 $eval='eval($evalcontents);';
-$closetag='?>';
 $evalcontents='echo
 "$opentag
 {$dollar}opentag=$quote$opentag$quote;
@@ -12,7 +11,6 @@ $evalcontents='echo
 {$dollar}quote=$dblquote$quote$dblquote;
 {$dollar}dblquote=$quote$dblquote$quote;
 {$dollar}eval=$quote$eval$quote;
-{$dollar}closetag=$quote$closetag$quote;
 {$dollar}evalcontents=$quote$evalcontents$quote;
 $eval";';
 eval($evalcontents);
